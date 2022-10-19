@@ -22,14 +22,14 @@ public class TwoPrimeNumber {
         }
          }
         public static int primeornot ( int n){
-            int c = 1;
+            int d = 1;
             for (int i = 2; i < n; i++){
                 if (n % i == 0){
-                    c = 0;
+                    d = 0;
                     break;
                 }
                }
-            return c;
+            return d;
              }
            }
 
