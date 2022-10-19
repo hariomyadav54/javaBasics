@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Frequency53 {
     public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
-            int[] arr1 = new int[100], fr1 = new int[100];
+            int[] arr1 = new int[101], fr1 = new int[101];
             int n, ctr;
             System.out.println("\n\nCount frequency of each element of an array:");
             System.out.println("------------------------------------------------");
