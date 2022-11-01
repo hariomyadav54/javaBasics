@@ -17,7 +17,6 @@ public class Oddandeven {
         }
         num = sc2.nextInt();
 
-
         if (num % 2 ==0)
             System.out.println(num + " is a Even Number");
         else
