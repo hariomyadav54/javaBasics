@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="student" class="org.example.Student1">
+
+        <constructor-arg  name="name" value="Rahul"/>
+        <constructor-arg  name="mobile">
+            <list>
+                <value> 9619594561</value>
+
+                <value> 9819386351</value>
+
+                <value> 9719374598</value>
+            </list>
+        </constructor-arg >
+
+        <constructor-arg  name="addresses">
+            <set>
+                <value>Airoli</value>
+                <value>Rabala</value>
+                <value>Vashi</value>
+            </set>
+        </constructor-arg >
+        <constructor-arg  name="courses">
+            <map>
+                <entry key="phy" value="2 month"/>
+                <entry key="maths" value="1.5 month"/>
+                <entry key="hindi" value="2 month"/>
+            </map>
+        </constructor-arg >
+    </bean>
+
+    <bean name="student2" class="org.example.Student1">
+
+        <property name="name" value="Hari"/>
+        <property name="mobile">
+
+            <list>
+
+                <value> 9619594561</value>
+                <value> 9819386351</value>
+                <value> 9719374598</value>
+            </list>
+        </property>
+
+        <property name="address">
+            <set>
+                <value> Navi Mumbai</value>
+                <value>Delhi</value>
+                <value>Pune</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="java" value="2 month"/>
+                <entry key="C" value="1.5 month"/>
+                <entry key="python" value="2 month"/>
+            </map>
+        </property>
+
+    </bean>
+
+</beans>
