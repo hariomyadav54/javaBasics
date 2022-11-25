@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util
+        https://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="org.example"/>
+    <context:annotation-config/>
+    <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="ds">
+        <constructor-arg value="jdbc:mysql://192.168.15.111:3306/student"/>
+        <constructor-arg value="jayant"/>
+        <constructor-arg value="root"/>
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+    </bean>
+
+    <bean class="org.springframework.jdbc.core.JdbcTemplate" id="jdbc1">
+        <property name="dataSource" ref="ds"/>
+
+    </bean>
+    <bean class="org.example.repository.EmployeeDaoImpl" id="dao">
+        <property name="jdbcTemplate" ref="jdbc1"/>
+    </bean>
+
+    <bean class="org.example.entity.model.Employee" id="std1"/>
+</beans>
